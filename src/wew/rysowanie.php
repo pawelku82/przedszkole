@@ -375,7 +375,7 @@ class rysowanie_grupy extends rysowanie
 		
 		$wynik1=$zapytanie->sprawdz_grupy($_POST["nazwap"], $_POST["rocznikp"]);
 		if ($wynik1=='NOK')
-			$wynik1="Grupa i rocznik już istnieją<br>";
+			$wynik1="Grupa już istnieje <br>";
 		else
 			$wynik1="";
 	
