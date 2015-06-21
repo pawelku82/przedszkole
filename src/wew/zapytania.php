@@ -215,7 +215,7 @@ class zapytania_grupy extends zapytania_sys
 	}
 	public function sprawdz_grupy($nazwa, $rocznik)
 	{
-		$pyt="select * from Grupy where nazwa='".$nazwa."' and rocznik=".$rocznik." and akt=1";
+		$pyt="select * from Grupy where nazwa='".$nazwa."' and akt=1";
 		$wynik=mysql_query($pyt, $this->con1);
 		if (mysql_num_rows($wynik)>0)
 			return "NOK";
