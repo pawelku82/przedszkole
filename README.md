@@ -1,5 +1,5 @@
 # PRZEDSZKOLE
 
-Glownym celem tego porijektu jest stworzenie systemu obslugi Przedszkola.
+Glownym celem tego projektu jest stworzenie systemu obslugi Przedszkola.
 
 MOZE OPIS FOLDEROW??
