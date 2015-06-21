@@ -231,6 +231,4 @@ class zapytania_grupy extends zapytania_sys
 		//echo $pyt;
 	}
 }
-
-
 ?>
