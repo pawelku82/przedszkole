@@ -62,13 +62,13 @@ class rysowanie
 			<div class="col-md-4"></div>
 			<div class="col-md-4"><div class="row">
 			<form role="form">
-			<h2 class="text-center">System zarzÄdzania przedszkolem</h2>
+			<h2 class="text-center">System zarządzania przedszkolem</h2>
 			<label></label>
-			<label for="user1" class="sr-only">UĹźytkownik:</label>
+			<label for="user1" class="sr-only">Użytkownik:</label>
 			<input type="text" id="user1" class="form-control" placeholder="Podaj login" required autofocus>
-			<label for="pass1" class="sr-only">HasĹo:</label>
+			<label for="pass1" class="sr-only">Hasło:</label>
 			<label></label>
-			<input type="password" id="pass1" class="form-control" placeholder="Podaj hasĹo" required>
+			<input type="password" id="pass1" class="form-control" placeholder="Podaj hasło" required>
 			<label></label>
 			<label></label>
 		
@@ -134,7 +134,7 @@ class rysowanie_pracownicy extends rysowanie
 		if ($this->sesja1->czyzalogowany()>3)
 		{
 			return '<button  type="submit" class="btn btn-primary" onclick="#paneldod" id="dodajb"  data-toggle="modal" data-target="#paneldod">&nbsp;
-					<span class="glyphicon glyphicon-user" aria-hidden="true" ></span>&nbsp;&nbsp;Dodaj&nbsp;OsobÄ&nbsp;</button>';
+					<span class="glyphicon glyphicon-user" aria-hidden="true" ></span>&nbsp;&nbsp;Dodaj&nbsp;Osobę&nbsp;</button>';
 		}
 	}
 	public function rysuj_tabelaprac()
@@ -148,7 +148,7 @@ class rysowanie_pracownicy extends rysowanie
 			{
 				$wybor1='<table class="table table-striped table-condensed">
 				<caption></caption>
-				<thead><tr><th>ImiÄ Nazwisko</th><th>UĹźytkownik</th><th>Stanowisko</th><th></th></tr></thead>
+				<thead><tr><th>Imię Nazwisko</th><th>Użytkownik</th><th>Stanowisko</th><th></th></tr></thead>
 				<tbody>';
 				while($wiersz=mysql_fetch_row($wynik1))
 				{
@@ -156,8 +156,8 @@ class rysowanie_pracownicy extends rysowanie
 					<td>'.$wiersz[2].'</td>
 					<td>'.$slownik->rodzaj_uprawnienia($wiersz[3]).'</td>
 					
-					<td><button type="button"  class="btn btn-danger btn-xs" aria-label="UsuĹ" onclick="usunprac('.$wiersz[4].')">
-					<strong>&nbsp;UsuĹ&nbsp;</strong></button>';
+					<td><button type="button"  class="btn btn-danger btn-xs" aria-label="Usuń" onclick="usunprac('.$wiersz[4].')">
+					<strong>&nbsp;Usuń&nbsp;</strong></button>';
 					}
 					$wybor1.='</td></tr>';
 					
@@ -176,23 +176,23 @@ class rysowanie_pracownicy extends rysowanie
 		$dane="";
 		$zapytanie = new zapytania_pracownicy;
 		if (strlen($_POST["imiep"])<2)
-			$wynik1="ProszÄ podaÄ ImiÄ<br>";
+			$wynik1="Proszę podać Imię<br>";
 		
 		if (strlen($_POST["nazwiskop"])<2)
-			$wynik1.="ProszÄ podaÄ Nazwisko<br>";
+			$wynik1.="Proszę podać Nazwisko<br>";
 		
 		if (strlen($_POST["userp"])<2)
-			$wynik1.="ProszÄ podaÄ nazwÄ uĹźytkownika<br>";
+			$wynik1.="Proszę podać nazwę użytkownika<br>";
 		else
 			if ($zapytanie->sprawdz_login($_POST["userp"]))
-				$wynik1.="Nazwa uĹźytkownika juĹź jest zarejestrowana<br>";
+				$wynik1.="Nazwa użytkownika już jest zarejestrowana<br>";
 		
 		
 		if (strlen($_POST["passp1"])<8)
-			$wynik1.="ProszÄ podaÄ HasĹo min 8 znakĂłw<br>";
+			$wynik1.="Proszę podać Hasło min 8 znaków<br>";
 		
 		if ($_POST["passp1"]!=$_POST["passp2"])
-			$wynik1.="HasĹa nie sÄ takie same<br>";
+			$wynik1.="Hasła nie są takie same<br>";
 			
 		
 		if (strlen($wynik1)==0)
@@ -236,7 +236,7 @@ class rysowanie_dzieci extends rysowanie
 			{
 				$wybor1='<table class="table table-striped table-condensed">
 				<caption></caption>
-				<thead><tr><th>ImiÄ Nazwisko</th><th>Grupa</th><th>Opiekun</th><th>Opiekun</th><th></th></tr></thead>
+				<thead><tr><th>Imię Nazwisko</th><th>Grupa</th><th>Opiekun</th><th>Opiekun</th><th></th></tr></thead>
 				<tbody>';
 				while($wiersz=mysql_fetch_row($wynik1))
 				{
@@ -245,8 +245,8 @@ class rysowanie_dzieci extends rysowanie
 					<td>'.$zapytanie->opiekun_dzieci($wiersz[2]).'</td>
 					<td>'.$zapytanie->opiekun_dzieci($wiersz[3]).'</td>
 					
-					<td><button type="button"  class="btn btn-danger btn-xs" aria-label="UsuĹ" onclick="usundzieci('.$wiersz[5].')">
-					<strong>&nbsp;UsuĹ&nbsp;</strong></button>';
+					<td><button type="button"  class="btn btn-danger btn-xs" aria-label="Usuń" onclick="usundzieci('.$wiersz[5].')">
+					<strong>&nbsp;Usuń&nbsp;</strong></button>';
 					}
 					$wybor1.='</td></tr>';
 					
@@ -265,16 +265,16 @@ class rysowanie_dzieci extends rysowanie
 		$dane="";
 		$zapytanie = new zapytania_dzieci;
 		if (strlen($_POST["imiep"])<2)
-			$wynik1="ProszÄ podaÄ ImiÄ<br>";
+			$wynik1="Proszę podać Imię<br>";
 		
 		if (strlen($_POST["nazwiskop"])<2)
-			$wynik1.="ProszÄ podaÄ Nazwisko<br>";
+			$wynik1.="Proszę podać Nazwisko<br>";
 		
 		if ($_POST["opiekun1"]==0)
-			$wynik1.="ProszÄ wybraÄ opiekuna<br>";
+			$wynik1.="Proszę wybrać opiekuna<br>";
 		
 		if ($_POST["grupa1"]==0)
-			$wynik1.="ProszÄ wybraÄ grupÄ<br>";
+			$wynik1.="Proszę wybrać grupę<br>";
 		
 		
 		
@@ -284,7 +284,7 @@ class rysowanie_dzieci extends rysowanie
 			$dane.="'".$_POST['imiep']."', "."'".$_POST['nazwiskop']."', ".$_POST['opiekun1'].", ".$_POST['opiekun2'].", ".$_POST['grupa1'];
 			$wynik1=$zapytanie->dodaj_dzieci($pola, $dane);
 			if (strlen($wynik1)<2)
-				$wynik1="Dziecko dodane prawidĹowo";
+				$wynik1="Dziecko dodane prawidłowo";
 			unset($zapytanie);
 		}	
 			echo $wynik1;
@@ -322,7 +322,7 @@ class rysowanie_grupy extends rysowanie
 		if ($this->sesja1->czyzalogowany()>3)
 		{
 			return '<button  type="submit" class="btn btn-primary" onclick="#paneldod" id="dodajb" data-toggle="modal" data-target="#paneldod">&nbsp;
-					<span class="glyphicon glyphicon-asterisk" aria-hidden="true" ></span>&nbsp;&nbsp;Dodaj&nbsp;GrupÄ&nbsp;</button>';
+					<span class="glyphicon glyphicon-asterisk" aria-hidden="true" ></span>&nbsp;&nbsp;Dodaj&nbsp;Grupę&nbsp;</button>';
 		}
 	}
 	public function rysuj_tabelagrupy()
@@ -343,8 +343,8 @@ class rysowanie_grupy extends rysowanie
 					<td>'.$wiersz[1].'</td>
 					
 					
-					<td><button type="button"  class="btn btn-danger btn-xs" aria-label="UsuĹ" onclick="usungrupy('.$wiersz[2].')">
-					<strong>&nbsp;UsuĹ&nbsp;</strong></button>';
+					<td><button type="button"  class="btn btn-danger btn-xs" aria-label="Usuń" onclick="usungrupy('.$wiersz[2].')">
+					<strong>&nbsp;Usuń&nbsp;</strong></button>';
 					}
 					$wybor1.='</td></tr>';
 					
@@ -362,20 +362,20 @@ class rysowanie_grupy extends rysowanie
 		$dane="";
 		$zapytanie = new zapytania_grupy;
 		if (strlen($_POST["nazwap"])<2)
-			$wynik1="ProszÄ podaÄ NazwÄ<br>";
+			$wynik1="Proszę podać Nazwę<br>";
 		
 		if (strlen($_POST["rocznikp"])==4)
 		{
 			$spr1=(int)$_POST["rocznikp"];
 			if ($spr1<2009)
-				$wynik1.="ProszÄ podaÄ rocznik<br>";
+				$wynik1.="Proszę podać rocznik<br>";
 		}
 		else
-			$wynik1.="ProszÄ podaÄ rocznik<br>";
+			$wynik1.="Proszę podać rocznik<br>";
 		
 		$wynik1=$zapytanie->sprawdz_grupy($_POST["nazwap"], $_POST["rocznikp"]);
 		if ($wynik1=='NOK')
-			$wynik1="Grupa już istnieje<br>";
+			$wynik1="Grupa i rocznik już istnieją<br>";
 		else
 			$wynik1="";
 	
@@ -385,7 +385,7 @@ class rysowanie_grupy extends rysowanie
 			$dane.="'".$_POST['nazwap']."', ".$_POST['rocznikp'];
 			$wynik1=$zapytanie->dodaj_grupy($pola, $dane);
 			if (strlen($wynik1)<2)
-				$wynik1="Grupa dodana prawidĹowo";
+				$wynik1="Grupa dodana prawidłowo";
 			unset($zapytanie);
 		}	
 			echo $wynik1;
@@ -398,6 +398,8 @@ class rysowanie_grupy extends rysowanie
 	}
 }
 
+
+
 class slownik_sys
 {
 	public $uprawnienia=array('Opiekun', 'Nauczyciel', 'Wychowawca', 'Dyrektor');
@@ -408,5 +410,6 @@ class slownik_sys
 	}
 	
 }
+
 
 ?>
