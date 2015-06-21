@@ -2,7 +2,7 @@
 
 Glownym celem tego projektu jest stworzenie systemu obslugi Przedszkola.
 
-
+#
 Jak to działa:
 
 1. Główny plik /wew/klasy.php
