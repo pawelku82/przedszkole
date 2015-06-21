@@ -1,4 +1,4 @@
-#SYSTEMU OBSŁUGI PRZEDSZKOLA
+#SYSTEM OBSŁUGI PRZEDSZKOLA
 System wspomagający zarządzanie przedszkolem<br><br> 
 
 Projekt wykonywany w ramach przedmiotu Technologie Aplikacji Internetowych<br>
