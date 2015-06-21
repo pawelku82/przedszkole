@@ -13,12 +13,10 @@ if (isset($_GET["wyloguj"]))
 if (isset($_GET["klawisz"]))
 {
 	echo $rysp->rysuj_kdodaj();
-
 }
 if (isset($_GET["rysujtab"]))
 {
 	echo $rysp->rysuj_tabeladzieci();
-
 }
 if (isset($_GET["doddzieci"]))
 {
