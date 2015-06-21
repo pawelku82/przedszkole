@@ -1,6 +1,4 @@
-# PRZEDSZKOLE
-
-#Glownym celem tego projektu jest stworzenie systemu obslugi Przedszkola.
+#Glownym celem tego projektu jest stworzenie SYSTEMU OBSLUGI PRZEDSZKOLA.
 
 Jak to działa:
 
