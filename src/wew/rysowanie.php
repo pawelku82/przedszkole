@@ -409,5 +409,4 @@ class slownik_sys
 	
 }
 
-
 ?>
